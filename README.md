@@ -30,7 +30,8 @@ Para baixar o script diretamente, clique no link abaixo:
 
 ## 💡 Observações
 
-- Recomendado executar como *Administrador* para acesso completo às funcionalidades mas cuidado nem todas as funçoes estao prontas ainda.
+-Recomendado executar como Administrador para acesso completo às funcionalidades, mas cuidado, nem todas as funções estão prontas ainda.estao prontas ainda.
+
 - Testado no Windows 10 e 11.
 
 Este projeto contém várias compilações de scripts que fui encontrando e editando, facilitando o modo de configurar o Windows de forma rápida e precisa usando meios incomuns mais conhecidos como gambiarra.  
