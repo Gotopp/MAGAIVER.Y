@@ -1,17 +1,5 @@
-┌───────────────────────────────────────────────┐
-│                                               │
-│             🛠  MAGAIVER                     │
-│                                               │
-│   Automação e soluções práticas para Windows  │
-│                                               │
-│   🔹 Scripts utilitários                      │
-│   🔹 Atalhos e ferramentas úteis              │
-│   🔹 Compatível com Windows 10 e 11           │
-│                                               │
-│   📥 Baixe agora:                             │
-│   github.com/Gotopp/MAGAIVER.Y                │
-│                                               │
-└───────────────────────────────────────────────┘
+## MAGAIVER
+
 Script utilitário criado para automatizar tarefas e fornecer soluções simples e funcionais no ambiente Windows.
 
 ---
