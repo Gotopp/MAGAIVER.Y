@@ -1,7 +1,6 @@
 # MAGAIVER.
-# Nome do Projeto
 
-Este repositório contém uma compilação de scripts desenvolvidos com o objetivo de [descreva brevemente o propósito, ex: automatizar tarefas, realizar análise, auxiliar em testes, etc.].
+Este repositório contém varias compilaçoes de scripts que fui encontrando e editando, facilitando o modo de configurar o windows de forma rapida e precisa usando meios incomuns mais conhecidos como gambiaras  
 
 ## Objetivo
 
