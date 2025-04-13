@@ -30,7 +30,7 @@ Para baixar o script diretamente, clique no link abaixo:
 
 ## 💡 Observações
 
--Recomendado executar como Administrador para acesso completo às funcionalidades, mas cuidado, nem todas as funções estão prontas ainda.estao prontas ainda.
+-Recomendado executar como Administrador para acesso completo às funcionalidades, mas cuidado, nem todas as funções estão prontas ainda.
 
 - Testado no Windows 10 e 11.
 
