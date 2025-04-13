@@ -1,4 +1,4 @@
-# MAGAIVER.cmd
+# MAGAIVER
 
 Script utilitário criado para automatizar tarefas e fornecer soluções simples e funcionais no ambiente Windows.
 
