@@ -39,7 +39,7 @@ menu 852
 
 menu 963
 
-
+[Baixar MAGAIVER.cmd](https://github.com/Gotopp/MAGAIVERY.Y/raw/main/MAGAIVER.cmd)
 
 ## Objetivo
 
