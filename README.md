@@ -1,8 +1,9 @@
 # MAGAIVER.
-Este repositório contém varias compilaçoes de scripts que fui encontrando e editando, facilitando o modo de configurar o windows de forma rapida e precisa usando meios incomuns mais conhecidos como gambiaras  
+Este repositório contém várias compilações de scripts que fui encontrando e editando, facilitando o modo de configurar o Windows de forma rápida e precisa usando meios incomuns mais conhecidos como gambiarra.  
 
 Ele contém vários menus com ótimas opções e ideias.
-Os menus são alternadosentre numeros e so digitar e dar enter:
+
+Os menus são alternados entre números e só digitar e dar enter:
 
 Menu 147
 
@@ -42,4 +43,4 @@ menu 963
 
 ## Objetivo
 
-Meu objetivo com este projeto fazer de tudo um pouco e fornecer soluçoes simples e funcional, como ele ficou grande ainda preciso lapidar muito quem quiser baixar e editar mais ele ta liberado   
+Meu objetivo com este projeto fazer de tudo um pouco e fornecer soluçoes simples e funcional, como ele ficou grande ainda preciso lapidar muito quem quiser baixar e editar mais ele ta liberado, aceito criticas   
