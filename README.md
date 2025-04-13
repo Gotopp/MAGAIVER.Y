@@ -30,7 +30,7 @@ Para baixar o script diretamente, clique no link abaixo:
 
 ## 💡 Observações
 
--Recomendado executar como Administrador para acesso completo às funcionalidades, mas cuidado, nem todas as funções estão prontas ainda.
+-Recomendado executar como Administrador para acesso completo às funcionalidades, mas cuidado nem todas as funções estão prontas ainda, recomendo usar um ponto de restauração caso de ruim.
 
 - Testado no Windows 10 e 11.
 
@@ -77,7 +77,7 @@ menu 852
 ## 📌 Contribuições
 
 Sinta-se à vontade para sugerir melhorias ou abrir um pull request. Toda ajuda é bem-vinda!
-
+Ainda estou aprendendo a programar, entao peço paciencia ao usuarios  
 ---
 
 
