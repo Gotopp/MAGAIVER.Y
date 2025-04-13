@@ -1,5 +1,39 @@
-# MAGAIVER.
-Este repositório contém várias compilações de scripts que fui encontrando e editando, facilitando o modo de configurar o Windows de forma rápida e precisa usando meios incomuns mais conhecidos como gambiarra.  
+# MAGAIVER.cmd
+
+Script utilitário criado para automatizar tarefas e fornecer soluções simples e funcionais no ambiente Windows.
+
+---
+
+## ✅ Objetivo
+
+Meu objetivo com este projeto é fazer de tudo um pouco e fornecer soluções simples e funcionais, como automações, atalhos e ferramentas úteis para o dia a dia.
+
+---
+
+## ⬇ Baixar o Projeto
+
+Para baixar o script diretamente, clique no link abaixo:
+
+[*Baixar MAGAIVER.cmd*](https://github.com/Gotopp/MAGAIVER.Y/raw/main/MAGAIVER.cmd)
+
+> *Dica:* Caso o arquivo abra no navegador, clique com o botão direito no link e selecione *"Salvar link como..."* para fazer o download.
+
+---
+
+## ⚙ Como usar
+
+1. Baixe o arquivo conforme indicado acima.
+2. Dê um duplo clique em MAGAIVER.cmd para executá-lo.
+3. Caso apareça uma mensagem de segurança, clique em "Mais informações" e depois em "Executar assim mesmo".
+
+---
+
+## 💡 Observações
+
+- Recomendado executar como *Administrador* para acesso completo às funcionalidades.
+- Testado no Windows 10 e 11.
+
+Este projeto contém várias compilações de scripts que fui encontrando e editando, facilitando o modo de configurar o Windows de forma rápida e precisa usando meios incomuns mais conhecidos como gambiarra.  
 
 Ele contém vários menus com ótimas opções e ideias.
 
@@ -37,10 +71,13 @@ menu 852
 
 ![{296092A2-6C05-4823-BE4D-17C09B140D65}](https://github.com/user-attachments/assets/2211927d-59d8-4cc6-9d67-3a51dfcdd2db)
 
-menu 963
+---
 
-[Baixar MAGAIVER.cmd](https://github.com/Gotopp/MAGAIVERY.Y/raw/main/MAGAIVER.cmd)
+## 📌 Contribuições
 
-## Objetivo
+Sinta-se à vontade para sugerir melhorias ou abrir um pull request. Toda ajuda é bem-vinda!
 
-Meu objetivo com este projeto fazer de tudo um pouco e fornecer soluçoes simples e funcional, como ele ficou grande ainda preciso lapidar muito quem quiser baixar e editar mais ele ta liberado, aceito criticas   
+---
+
+## 📄 Licença
+
