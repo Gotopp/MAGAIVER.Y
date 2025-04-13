@@ -4,4 +4,4 @@ Este repositório contém varias compilaçoes de scripts que fui encontrando e e
 
 ## Objetivo
 
-Fornecer uma solução simples e funcional 
+Meu objetivo com este projeto fazer de tudo um pouco e fornecer soluçoes simples e funcional, como ele ficou grande ainda preciso lapidar muito quem quiser baixar e editar mais ele ta liberado   
