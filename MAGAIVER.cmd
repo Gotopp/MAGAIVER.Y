@@ -6975,7 +6975,7 @@ echo.
 echo.
 echo.
 cls
-goto :res
+goto 147
 
 :res 
 md C:\exm
