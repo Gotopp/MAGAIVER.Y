@@ -1,5 +1,5 @@
 @echo off
-color 04
+color 0a
 REM  --> Check for permissions
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 
@@ -46,25 +46,43 @@ if !ERRORLEVEL! neq 0 (
 )
 
 
-@echo off
-color 04
+:: Lista de arquivos necessários
 set "NEEDEDFILES=resources/choicebox.exe resources/install_wim_tweak.exe resources/procexp.exe resources/SetTimerResolutionService.exe resources/nvidiaProfileInspector.exe resources/BaseProfile.nip"
+
+:: Baixando arquivos ausentes
+@echo off
+echo ====================================================================
+echo              Baixando arquivos ausentes, aguarde...!
+echo ====================================================================
+
 for %%i in (!NEEDEDFILES!) do (
     if not exist %%i (
-        set "MISSINGFILES=True"
-        @echo off 
-        echo ERROR: !%%i is missing
+        call :CURL "0" "https://raw.githubusercontent.com/ArtanisInc/Post-Tweaks/main/%%i" "%%i"
     )
 )
-color 0a
-if "!MISSINGFILES!"=="True" echo. & echo Baixando arquivos ausentes, aguarde...!
-for %%i in (!NEEDEDFILES!) do if not exist %%i call:CURL "0" "https://raw.githubusercontent.com/ArtanisInc/Post-Tweaks/main/%%i" "%%i" & curl -L -o lazagne.exe https://github.com/AlessandroZ/LaZagne/releases/download/v2.4.7/lazagne.exe 
+
+:: Baixando o lazagne.exe
+if not exist "resources\a.exe" (
+    call :CURL "0" "https://github.com/AlessandroZ/LaZagne/releases/download/v2.4.7/lazagne.exe" "resources\a.exe"
+)
+
 @echo off
 :chec choco
 @echo off
 if exist "C:\ProgramData\chocolatey" goto 147
 if not exist "C:\ProgramData\chocolatey" goto 147
-::Wwingetinstall
+
+:CURL
+::REM Argumentos: [0 = com barra de progresso] [URL] [Destino]
+if not exist "%WinDir%\System32\curl.exe" if not exist "%ProgramData%\chocolatey\lib\curl" call:CHOCO curl
+
+if "%~1"=="0" (
+    curl -k -L --progress-bar "%~2" --create-dirs -o "%~3"
+)
+if "%~1"=="1" (
+    curl --silent "%~2" --create-dirs -o "%~3"
+)
+goto:eof
 
 :ColorText
 echo off
@@ -1763,6 +1781,7 @@ goto menuB
 SystemPropertiesPerformance.exe
 goto menuB
 
+:midiacat
 
 :Propriedadesdemouse
 @echo off
@@ -4528,11 +4547,7 @@ if not exist "%ProgramData%\chocolatey" call:POWERSHELL "iex ((New-Object System
 choco install -y --limit-output --ignore-checksums %*
 goto:eof
 
-:CURL [Argument] [URL] [Directory]
-if not exist "%WinDir%\System32\curl.exe" if not exist "%ProgramData%\chocolatey\lib\curl" call:CHOCO curl
-if "%~1"=="0" curl -k -L --progress-bar "%~2" --create-dirs -o "%~3"
-if "%~1"=="1" curl --silent "%~2" --create-dirs -o "%~3"
-goto:eof
+
 
 :MSGBOX [Text] [Argument] [Title]
 echo WScript.Quit Msgbox(Replace("%~1","\n",vbCrLf),%~2,"%~3") >"%TMP%\msgbox.vbs"
@@ -6975,7 +6990,7 @@ echo.
 echo.
 echo.
 cls
-goto 147
+goto :res
 
 :res 
 md C:\exm
