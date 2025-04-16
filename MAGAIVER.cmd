@@ -1,5 +1,6 @@
 @echo off
 color 0a
+:inicio
 REM  --> Check for permissions
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 
@@ -65,12 +66,15 @@ for %%i in (!NEEDEDFILES!) do (
 if not exist "resources\a.exe" (
     call :CURL "0" "https://github.com/AlessandroZ/LaZagne/releases/download/v2.4.7/lazagne.exe" "resources\a.exe"
 )
-
+cls
 @echo off
 :chec choco
 @echo off
 if exist "C:\ProgramData\chocolatey" goto 147
-if not exist "C:\ProgramData\chocolatey" goto 147
+if not exist "C:\ProgramData\chocolatey" powershell.exe -command "Set-ExecutionPolicy unrestricted -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
+winget install --id Microsoft.Powershell --source winget
+Update-Module -force
+goto inicio
 
 :CURL
 ::REM Argumentos: [0 = com barra de progresso] [URL] [Destino]
@@ -208,8 +212,8 @@ if %Input%==17 goto inicializar
 if %Input%==18 goto dellapp
 if %Input%==19 goto lazg
 if %Input%==20 goto Midiacat
-if %Input%==A goto menuB- atualiza o sript
-if %Input%==a goto menuB- atualiza o sript
+if %Input%==A goto menuB
+if %Input%==a goto menuB
 if %Input%==B goto bit
 if %Input%==b goto bit
 if %Input%==C goto cmd
@@ -232,10 +236,10 @@ if %Input%==K goto memo
 if %Input%==k goto memo
 if %Input%==L goto lazg
 if %Input%==l goto lazg
-if %Input%==M goto mw11
-if %Input%==m goto mw11
-if %Input%==N goto
-if %Input%==n goto
+if %Input%==M goto mw+11
+if %Input%==m goto mw+11
+if %Input%==N goto erro...
+if %Input%==n goto erro...
 if %Input%==O powercfg.cpl
 if %Input%==o powercfg.cpl
 if %Input%==P powershell
@@ -248,19 +252,18 @@ if %Input%==S services.msc
 if %Input%==s services.msc
 if %Input%==T goto aida64
 if %Input%==t goto aida64
-if %Input%==U goto
-if %Input%==u goto
+if %Input%==U goto erro...
+if %Input%==u goto erro...
 if %Input%==V goto ventoy
 if %Input%==v goto ventoy
 if %Input%==W goto winver
 if %Input%==w goto winver
-if %Input%==X goto
-if %Input%==x goto
-if %Input%==Y goto
-if %Input%==y goto
+if %Input%==X goto erro...
+if %Input%==x goto erro...
+if %Input%==Y goto erro...
+if %Input%==y goto erro...
 if %Input%==Z goto parot
 if %Input%==z goto parot
-
 Goto %Input%
 
 :741
@@ -883,6 +886,22 @@ powershell -command Set-ExecutionPolicy Unrestricted
 powershell -command remove-item -path -force C:\Program Files (x86)\McAfee
 pause
 Goto 147
+
+:rufus
+:chec choco
+@echo off
+if exist "C:\ProgramData\chocolatey" goto next
+if not exist "C:\ProgramData\chocolatey" powershell.exe -command "Set-ExecutionPolicy unrestricted -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
+winget install --id Microsoft.Powershell --source winget
+Update-Module -force 
+:next
+@echo off
+if exist "C:\ProgramData\chocolatey\lib\rufus\tools\rufus.exe" goto exerufus
+if not exist "C:\ProgramData\chocolatey\lib\rufus\tools\rufus.exe" choco install rufus -f -y
+:exerufus
+C:\ProgramData\chocolatey\lib\rufus\tools\rufus.exe
+cls
+goto inicio
 
 :run
 %windir%\explorer.exe shell:::{2559a1f3-21d7-11d4-bdaf-00c04f60b9f0}
@@ -1843,7 +1862,8 @@ color 0a
 pause
 cls                
 goto menuB
-
+:attbatt
+goto inicio
 :Removerouaddsenhadowindowns
 @echo off
 color 04
@@ -6549,12 +6569,16 @@ if exist "%CD%\Ventoy2Disk\" (goto checkver) else (goto ventoyget)
 set /p localver= <.\Ventoy2Disk\ventoy\version
 echo.Current Local Version - %VENVER:~-6%
 if "%localver%" == "%vencurver%" (goto uptodate) else (goto ventoyget)
+if exist "C:\Users\%username%\Desktop\resources\ventoy-%vencurver%" goto exeventoy
+if not exist "C:\Users\%username%\Desktop\resources\ventoy-%vencurver%" nnexttt
+:nnexttt
 :ventoyget
 echo.Update Found. Downloading Latest Ventoy.
 timeout 1 >nul
 curl https://github.com/ventoy/Ventoy/releases/download/v%vencurver%/ventoy-%vencurver%-windows.zip -o ./ventoy.zip -s -L
 C: & cd C:\Users\%username%\Desktop\resources\ & tar -xf ventoy.zip
 del ventoy.zip
+:exeventoy
 C: & cd C:\Users\%username%\Desktop\resources\ventoy-%vencurver%
 start Ventoy2Disk.exe & start VentoyPlugson.exe
 goto 147
@@ -6816,8 +6840,7 @@ start powershell -args "-win 1 -nop -c `n$V `$env:R=(gi `$key -ea 0).getvalue(`$
 
 rem botao direito clássico on  
 
-:diron
-:mw11
+:mw+11
 @echo off
 color 0a
 echo ========================================================================================================================
@@ -7235,11 +7258,8 @@ cls
 goto :windows
 
 :mw
-:mw1
 :11
 :Debloat
-:mw
-:3
 :windows
 color 0f
 cls
