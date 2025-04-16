@@ -146,6 +146,7 @@ goto restorepoint
 
 :menuB
 :147
+C: & cd C:\Users\%username%\Desktop\resources\
 @echo off
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do rem"') do set "DEL=%%a"
 mode 121,29
@@ -177,49 +178,14 @@ echo    %p%[%h%4%p%]%h%--Atualizador de Programas                      %p%[%h%14
 echo    %p%[%h%5%p%]%h%--Fazer beckup de Drives para uma pasta         %p%[%h%15%p%]%h%--Ponto de Restauracao       
 echo    %p%[%h%6%p%]%h%--Configurar Energia                            %p%[%h%16%p%]%h%--Recursos do Windows              
 echo    %p%[%h%7%p%]%h%--Desinstalar programas                         %p%[%h%17%p%]%h%--Pasta que inicia com o boot Windows    
-echo    %p%[%h%8%p%]%h%--Destruir windows defender                     %p%[%h%18%p%]%h%--Remover programas inuteis do windows       %p%[%h%X1%p%]%h%--Desligar 
-echo    %p%[%h%9%p%]%h%--Destruir one drive                            %p%[%h%19%p%]%h%--Recuperador de Senhas                      %p%[%h%X2%p%]%h%--Reiniciar
-echo   %p%[%h%10%p%]%h%--Destruit windows update                       %p%[%h%20%p%]%h%--Corigir arquivos corrompidos               %p%[%h%X3%p%]%h%--WinRe  
+echo    %p%[%h%8%p%]%h%--Destruir windows defender                     %p%[%h%18%p%]%h%--Remover programas inuteis do windows  %p%[%h%X1%p%]%h%--Desligar 
+echo    %p%[%h%9%p%]%h%--Destruir one drive                            %p%[%h%19%p%]%h%--Recuperador de Senhas                 %p%[%h%X2%p%]%h%--Reiniciar
+echo   %p%[%h%10%p%]%h%--Destruit windows update                       %p%[%h%20%p%]%h%--Criar Midiacat (Feramentas Bootaveis) %p%[%h%X3%p%]%h%--WinRe  
 echo =========================================================================================================================
 Call :ColorText 05 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 echo =========================================================================================================================
 set /p Input=[+]
 cls
-if %Input%==e goto reiniciarexplorer
-if %Input%==p goto powershell 
-if %Input%==c goto cmd
-if %Input%==321 goto MenuX 
-if %Input%==a goto menuB
-if %Input%==killpass goto killpass
-if %Input%==info goto ABX
-if %Input%==infoall goto infoall
-if %Input%==W goto Wwingetinstall
-if %Input%==C goto Cchocoinstall
-if %Input%==H goto menuBxA
-if %input%==m1 goto MI
-if %input%==m2 goto MI2
-if %input%==m3 goto MI3
-if %input%==wc goto winchoco
-if %input%==lupa goto pass
-if %input%==laz goto lazg
-if %input%==services goto SERVICESS
-if %input%==by goto credtt
-if %input%==ptres goto rstrui
-if %input%==wifi goto wifix
-if %Input%==mag155 goto in
-if %Input%==ps1bat goto convertps1pbat
-if %Input%==hackall goto hackall
-if %Input%==ini goto inicializar
-if %Input%==memo taskkill /f /fi "Session ne 0" /fi "Memusage gt 10000" & start explorer.exe
-if %Input%==pass goto pass
-if %Input%==killpass goto killpass
-if %Input%==killall goto killall  
-if %Input%==mp goto winnett               
-if %input%==loading goto Loading
-if %input%==lup goto pass
-if %Input%==g goto gerenciadordetarefas 
-if %Input%==mntt goto creditzmntt
-:xxx
 if %Input%==0 goto debloaattt
 if %Input%==1 goto Winativador2
 if %Input%==2 goto SystemPropertiesPerformance
@@ -241,7 +207,60 @@ if %Input%==16 goto recursosdowindows
 if %Input%==17 goto inicializar
 if %Input%==18 goto dellapp
 if %Input%==19 goto lazg
-if %Input%==20 goto VerificaecorigirarquivoscorrompidosdoHD
+if %Input%==20 goto Midiacat
+if %Input%==A goto menuB- atualiza o sript
+if %Input%==a goto menuB- atualiza o sript
+if %Input%==B goto bit
+if %Input%==b goto bit
+if %Input%==C goto cmd
+if %Input%==c goto cdm
+if %Input%==D goto diskpart
+if %Input%==d goto diskpart
+if %Input%==E start explorer.exe
+if %Input%==e start explorer.exe
+if %Input%==F control firewall.cpl
+if %Input%==f control firewall.cpl
+if %Input%==G compmgmt.msc /s
+if %Input%==g compmgmt.msc /s
+if %Input%==H timedate.cpl
+if %Input%==h timedate.cpl
+if %Input%==I goto WoC
+if %Input%==i goto WoC
+if %Input%==J goto EmuDek 
+if %Input%==j goto EmuDek 
+if %Input%==K goto memo
+if %Input%==k goto memo
+if %Input%==L goto lazg
+if %Input%==l goto lazg
+if %Input%==M goto mw11
+if %Input%==m goto mw11
+if %Input%==N goto
+if %Input%==n goto
+if %Input%==O powercfg.cpl
+if %Input%==o powercfg.cpl
+if %Input%==P powershell
+if %Input%==p powershell
+if %Input%==Q goto QRcode
+if %Input%==q goto QRcode
+if %Input%==R goto rufus
+if %Input%==r goto rufus
+if %Input%==S services.msc
+if %Input%==s services.msc
+if %Input%==T goto aida64
+if %Input%==t goto aida64
+if %Input%==U goto
+if %Input%==u goto
+if %Input%==V goto ventoy
+if %Input%==v goto ventoy
+if %Input%==W goto winver
+if %Input%==w goto winver
+if %Input%==X goto
+if %Input%==x goto
+if %Input%==Y goto
+if %Input%==y goto
+if %Input%==Z goto parot
+if %Input%==z goto parot
+
 Goto %Input%
 
 :741
@@ -284,14 +303,6 @@ Call :ColorText 0F XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 echo =========================================================================================================================
 set /p Input=[+]
 cls
-if %Input%==pass goto pass
-if %Input%==killpass goto killpass
-if %Input%==killall goto killall  
-if %Input%==mp goto winnett               
-if %input%==loading goto Loading
-if %input%==lup goto pass
-if %Input%==g goto gerenciadordetarefas 
-if %Input%==mntt goto creditzmntt
 if %Input%==0 goto Propriedadesdosistema
 if %Input%==1 goto Gerenciamentodocomputador
 if %Input%==2 goto Configurarpastas
@@ -318,35 +329,6 @@ if %Input%==00 goto Msconfig
 if %Input%==01 goto Desligar
 if %Input%==02 goto Reiniciar
 if %Input%==03 goto WinRe
-if %Input%==147 goto 147
-if %Input%==258 goto menu
-if %Input%==369 goto menuF 
-if %Input%==e goto reiniciarexplorer
-if %Input%==p goto powershell 
-if %Input%==c goto cmd
-if %Input%==321 goto MenuX 
-if %Input%==a goto 147
-if %Input%==killpass goto killpass
-if %Input%==info goto ABX
-if %Input%==infoall goto infoall
-if %Input%==W goto Wwingetinstall
-if %Input%==C goto Cchocoinstall
-if %Input%==H goto menuBxA
-if %input%==m1 goto MI
-if %input%==m2 goto MI2
-if %input%==m3 goto MI3
-if %input%==wc goto winchoco
-if %input%==lupa goto pass
-if %input%==laz goto lazg
-if %input%==services goto SERVICESS
-if %input%==by goto credtt
-if %input%==ptres goto rstrui
-if %input%==wifi goto wifix
-if %Input%==mag155 goto in
-if %Input%==ps1bat goto convertps1pbat
-if %Input%==hackall goto hackall
-if %Input%==ini goto inicializar
-if %Input%==memo taskkill /f /fi "Session ne 0" /fi "Memusage gt 10000" & start explorer.exe
 Goto %Input%
 
 :convertps1pbat
@@ -393,8 +375,6 @@ Call :ColorText 0b XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 echo ========================================================================================================================
 set /p Input=[+]
 cls              
-if %Input%==mp goto winnett 
-if %input%==lup goto pass
 if %Input%==01 goto ufA
 if %Input%==02 goto ufB
 if %Input%==03 goto ufC 
@@ -425,22 +405,10 @@ if %Input%==x1 goto escanear
 if %Input%==x2 goto corrigir 
 if %Input%==x3 goto VerificaecorigirarquivoscorrompidosdoHD
 if %Input%==x4 goto dfrgui
-if %Input%==147 goto 147
 if %Input%==x5 goto Diskpart
 if %Input%==x6 goto Gerenciadordedisco
 if %Input%==x7 goto limpadisco
 if %Input%==x8 goto boot
-if %Input%==147 goto 147
-if %Input%==258 goto menu
-if %Input%==369 goto menuF
-if %Input%==.+- goto menuB
-if %Input%==/*- goto menuL
-if %Input%==e goto reiniciarexplorer
-if %Input%==p goto powershell 
-if %Input%==c goto cmd
-if %Input%==-*/ goto MenuX 
-if %Input%==a goto attbat
-if %Input%==z goto
 goto %Input%
 
 :rzA
@@ -611,9 +579,7 @@ echo ===========================================================================
 Call :ColorText 01 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 echo ========================================================================================================================
 set /p Input=[+]
-cls                
-if %Input%==mp goto winnett
-if %input%==lupa goto pass
+cls              
 if %Input%==0 goto otimizaropc
 if %Input%==01 goto limpacache
 if %Input%==02 goto Limparmemoria 
@@ -639,18 +605,6 @@ if %Input%==20 goto power
 if %Input%==01 goto Desligar
 if %Input%==02 goto Reiniciar
 if %Input%==03 goto menuF
-if %Input%==147 goto 147
-if %Input%==258 goto 258
-if %Input%==369 goto menuF
-if %Input%==/*- goto menuL
-if %Input%==e goto reiniciarexplorer
-if %Input%==p goto powershell 
-if %Input%==c goto cmd
-if %Input%==-*/ goto MenuX 
-if %Input%==a goto attbat
-if %Input%==z goto
-if %input%== x goto 147
-if %input%== X goto 147
 goto %Input%
 
 :menuX
@@ -688,8 +642,6 @@ Call :ColorText 06 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 echo =========================================================================================================================
 set /p Input=[+]
 cls             
-if %Input%==lupa goto pass
-if %Input%==X goto menuB
 if %Input%==0 start lib.exe 
 if %Input%==01 goto convertps1pbat 
 if %Input%==02 goto winchoco  
@@ -706,32 +658,6 @@ if %Input%==12 goto Configurarpastas
 if %Input%==13 goto killpass
 if %Input%==14 goto killatv 
 if %Input%==15 goto killwindefender 
-if %Input%==c goto cmd 
-if %Input%==a goto attbat
-if %Input%==killpass goto killpass
-if %Input%==147 goto 147
-if %Input%==258 goto menu
-if %Input%==369 goto menu
-if %Input%==.+== goto menuB
-if %Input%==/*== goto menuL
-if %Input%==d goto Desligamento remoto
-if %Input%==e goto reiniciarexplorer
-if %Input%==p goto powershell 
-if %Input%==c goto cmd
-if %Input%==a goto attbat
-if %Input%==killpass goto killpass
-if %Input%==C goto Cchocoinstall
-if %Input%==H goto menuBxA
-if %Input%==m1 goto MI
-if %Input%==m2 goto MI2
-if %Input%==m3 goto MI3
-if %Input%==wc goto winchoco 
-if %Input%==147 goto 147
-if %Input%==258 goto menu
-if %Input%==369 goto menuF
-if %Input%==by goto credtt
-if %Input%==services goto SERVICESS
-if %Input%==killall goto killl
 goto %Input%
 
 
@@ -1781,7 +1707,6 @@ goto menuB
 SystemPropertiesPerformance.exe
 goto menuB
 
-:midiacat
 
 :Propriedadesdemouse
 @echo off
@@ -1865,7 +1790,7 @@ goto menuB
 :Diskpart
 @echo off
 color 0a
-diskpart
+start diskpart
 cls                
 goto menuF
 :DiagnosticodoDirectX
@@ -2206,7 +2131,7 @@ color 06
 sfc /scannow && chkdsk /f /r /b && DISM /Online /Cleanup-Image /RestoreHealth
 pause
 cls                
-goto menuF
+goto menuB
 
 :debloaattt
 powershell -command "irm "https://christitus.com/win" | iex"
@@ -6562,6 +6487,37 @@ function PRODUCTS_XML { [xml]$xml = [io.file]::ReadAllText("$pwd\products.xml",[
 pause
 cls                
 goto menuB
+:WoC
+goto erro
+:help
+color 0b
+@echo off
+echo ========================================================================================================================
+Call :ColorText 0f XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.Atalhos.do.Magaiver.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+echo ========================================================================================================================                  
+echo.                        
+echo   [A]=Atualiza o script                                   [N]=
+echo   [B]=Abre o menu Bitlocker                               [O]=Opicoes de energia 
+echo   [C]=cmd                                                 [P]=powershell
+echo   [D]=Diskpart                                            [Q]=Gerador de QR code
+echo   [E]=Abre o explorer                                     [R]=Abre o rufus [criador de midia bootavel]
+echo   [F]=Firewall do windows                                 [S]=servicos do windows
+echo   [G]=Gerenciador de dispositivos                         [T]=Abre o Aida64
+echo   [H]=ajusta a data e hora                                [U]=Gerenciador de discos
+echo   [I]=instala o chocolatey ou o winget                    [V]=Instala o ventoy  
+echo   [J]=Instala o EmuDeck [pack de imuladores de consoles]  [W]=versao do seu Windows                          
+echo   [K]=Kill em todos os procesos atuais                    [X]=
+echo   [L]=Ativa o lazagner                                    [Y]=
+echo   [M]=Muda o botao direito clasico do w10                 [Z]=Papagaoi gay
+echo.
+echo ========================================================================================================================
+Call :ColorText 0f XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+echo ========================================================================================================================
+set /p choice=[+]
+cls                
+Goto %choice%
+
+
 
 :Winativador2
 @echo off
@@ -6569,6 +6525,39 @@ powershell -command "irm https://massgrave.dev/get|iex"
 cls                
 goto menuB
 
+:aida64
+cd C:\Users\MMNTT\Desktop\resources\AIDA 64\AIDA64_Extreme\AIDA64\ & start aida64.exe
+goto 147
+
+:ventoy
+C: & cd C:\Users\%username%\Desktop\resources\
+echo.Getting Current Ventoy Version
+timeout 0 >nul
+powershell -c "$data = curl https://api.github.com/repos/ventoy/ventoy/git/refs/tag -UseBasicParsing | ConvertFrom-Json; $data[-1].ref -replace 'refs/tags/', '' | Out-File -Encoding 'UTF8' -FilePath './ventoyversion.txt'"
+
+::START TEMP CODE 
+set /p VENVER= <./ventoyversion.txt
+::set VENVER=v1.0.91
+set vencurver=%VENVER:~-6%
+echo.Current Online Version - %VENVER:~-6%
+
+:checkventoyver
+echo.Checking if current version found on system.
+timeout 1 >nul
+if exist "%CD%\Ventoy2Disk\" (goto checkver) else (goto ventoyget)
+:checkver
+set /p localver= <.\Ventoy2Disk\ventoy\version
+echo.Current Local Version - %VENVER:~-6%
+if "%localver%" == "%vencurver%" (goto uptodate) else (goto ventoyget)
+:ventoyget
+echo.Update Found. Downloading Latest Ventoy.
+timeout 1 >nul
+curl https://github.com/ventoy/Ventoy/releases/download/v%vencurver%/ventoy-%vencurver%-windows.zip -o ./ventoy.zip -s -L
+C: & cd C:\Users\%username%\Desktop\resources\ & tar -xf ventoy.zip
+del ventoy.zip
+C: & cd C:\Users\%username%\Desktop\resources\ventoy-%vencurver%
+start Ventoy2Disk.exe & start VentoyPlugson.exe
+goto 147
 
 
 :pass
@@ -6860,8 +6849,6 @@ start explorer.exe
 goto 147
 
 :tech
-:8520
-:852
 @echo off
 Set Version=4
 set w=[97m
@@ -9083,6 +9070,21 @@ cls
 goto Menuww
 
 
+:QRcode
+:qr
+@echo off
+cls
+echo ====================================================================
+echo             Digite ou cole para gerar o Qr code 
+echo ====================================================================
+set /P choice="[+]"
+curl -f qrenco.de/%choice%
+pause
+cls
+goto 147
+
+
+
 
 :10war
 chcp 437 >nul 2>&1
@@ -9755,7 +9757,9 @@ pause
 cls                
 goto kbm 
 
-
+:parot
+start cmd -k curl parot.ascii.live
+goto 147
 :k2
 cls
 echo.
@@ -10528,7 +10532,9 @@ powershell -nop -c "& {$host.ui.rawui.windowtitle=' '}"
 call :mem
 )
 
-
+:EmuDek 
+PowerShell -Command "& {Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/EmuDeck/emudeck-we/main/install.ps1'))}"
+goto 147
 
 
 :mem
