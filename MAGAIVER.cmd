@@ -226,8 +226,8 @@ if %Input%==F control firewall.cpl
 if %Input%==f control firewall.cpl
 if %Input%==G compmgmt.msc /s
 if %Input%==g compmgmt.msc /s
-if %Input%==H timedate.cpl
-if %Input%==h timedate.cpl
+if %Input%==H start timedate.cpl
+if %Input%==h start timedate.cpl
 if %Input%==I goto WoC
 if %Input%==i goto WoC
 if %Input%==J goto EmuDek 
@@ -240,8 +240,8 @@ if %Input%==M goto mw+11
 if %Input%==m goto mw+11
 if %Input%==N goto erro...
 if %Input%==n goto erro...
-if %Input%==O powercfg.cpl
-if %Input%==o powercfg.cpl
+if %Input%==O start powercfg.cpl
+if %Input%==o start powercfg.cpl
 if %Input%==P powershell
 if %Input%==p powershell
 if %Input%==Q goto QRcode
@@ -252,16 +252,16 @@ if %Input%==S services.msc
 if %Input%==s services.msc
 if %Input%==T goto aida64
 if %Input%==t goto aida64
-if %Input%==U goto erro...
-if %Input%==u goto erro...
+if %Input%==U start disckmgt.msc
+if %Input%==u start disckmgt.msc
 if %Input%==V goto ventoy
 if %Input%==v goto ventoy
 if %Input%==W goto winver
 if %Input%==w goto winver
 if %Input%==X goto erro...
-if %Input%==x goto erro...
-if %Input%==Y goto erro...
-if %Input%==y goto erro...
+if %Input%==x goto erro... 
+if %Input%==Y goto win+pausebreack
+if %Input%==y goto win+pausebreack
 if %Input%==Z goto parot
 if %Input%==z goto parot
 Goto %Input%
@@ -6524,20 +6524,76 @@ echo   [E]=Abre o explorer                                     [R]=Abre o rufus 
 echo   [F]=Firewall do windows                                 [S]=servicos do windows
 echo   [G]=Gerenciador de dispositivos                         [T]=Abre o Aida64
 echo   [H]=ajusta a data e hora                                [U]=Gerenciador de discos
-echo   [I]=instala o chocolatey ou o winget                    [V]=Instala o ventoy  
-echo   [J]=Instala o EmuDeck [pack de imuladores de consoles]  [W]=versao do seu Windows                          
-echo   [K]=Kill em todos os procesos atuais                    [X]=
-echo   [L]=Ativa o lazagner                                    [Y]=
+echo   [I]=instala o chocolatey ou o winget                    [V]=Instala o ventoy [criador de midia bootavel] 
+echo   [J]=Instala o EmuDeck [pack de imuladores de consoles]  [W]=Versao do seu Windows                          
+echo   [K]=Kill em todos os procesos atuais                    [X]=Se Auto destuir
+echo   [L]=Ativa o lazagner                                    [Y]=Informaçoes geraias do pc
 echo   [M]=Muda o botao direito clasico do w10                 [Z]=Papagaoi gay
 echo.
 echo ========================================================================================================================
 Call :ColorText 0f XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 echo ========================================================================================================================
 set /p choice=[+]
-cls                
-Goto %choice%
+cls
+if %Input%==A goto inicio
+if %Input%==a goto menuB
+if %Input%==B goto bit
+if %Input%==b goto bit
+if %Input%==C goto cmd
+if %Input%==c goto cdm
+if %Input%==D goto diskpart
+if %Input%==d goto diskpart
+if %Input%==E start explorer.exe
+if %Input%==e start explorer.exe
+if %Input%==F control firewall.cpl
+if %Input%==f control firewall.cpl
+if %Input%==G compmgmt.msc /s
+if %Input%==g compmgmt.msc /s
+if %Input%==H start timedate.cpl
+if %Input%==h start timedate.cpl
+if %Input%==I goto WoC
+if %Input%==i goto WoC
+if %Input%==J goto EmuDek 
+if %Input%==j goto EmuDek 
+if %Input%==K goto memo
+if %Input%==k goto memo
+if %Input%==L goto lazg
+if %Input%==l goto lazg
+if %Input%==M goto mw+11
+if %Input%==m goto mw+11
+if %Input%==N goto erro...
+if %Input%==n goto erro...
+if %Input%==O start powercfg.cpl
+if %Input%==o start powercfg.cpl
+if %Input%==P powershell
+if %Input%==p powershell
+if %Input%==Q goto QRcode
+if %Input%==q goto QRcode
+if %Input%==R goto rufus
+if %Input%==r goto rufus
+if %Input%==S start services.msc
+if %Input%==s start services.msc
+if %Input%==T goto aida64
+if %Input%==t goto aida64
+if %Input%==U start disckmgt.msc
+if %Input%==u start disckmgt.msc
+if %Input%==V goto ventoy
+if %Input%==v goto ventoy
+if %Input%==W goto winver
+if %Input%==w goto winver
+if %Input%==X goto erro...
+if %Input%==x goto erro... 
+if %Input%==Y goto win+pausebreack
+if %Input%==y goto win+pausebreack
+if %Input%==Z goto parot
+if %Input%==z goto parot
+Goto %Input%
 
 
+
+:win+pausebreack
+start ms-settings:about
+goto 147
 
 :Winativador2
 @echo off
